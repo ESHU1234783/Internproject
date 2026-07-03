@@ -167,3 +167,271 @@ a:hover {
         max-width: 450px;
     }
 }
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+    animation: fadeUp .5s ease;
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.auth-card p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.back-login {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.back-login:hover {
+    color: #1d4ed8;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar-left h2 {
+    color: #2563EB;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #EFF6FF;
+    color: #2563EB;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.icon-btn:hover {
+    background: #2563EB;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    font-size: 40px;
+    color: #2563EB;
+}
+
+.profile span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* ========== Responsive ========== */
+
+@media(max-width:768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .navbar-left h2 {
+        font-size: 20px;
+    }
+    .profile span {
+        display: none;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.dashboard {
+    padding: 40px;
+}
+
+.dashboard h1 {
+    color: #1E293B;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    color: #64748B;
+    font-size: 18px;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #1E293B;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #64748B;
+    font-size: 18px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, .18);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: #EFF6FF;
+    color: #2563EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+    color: #1E293B;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #64748B;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+}

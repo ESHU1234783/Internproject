@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/auth.js";
+import resumeRoutes from "./routes/resumeRoutes.js";
 
 // Load .env FIRST
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/resume", resumeRoutes);
 
 app.get("/", (req, res) => {
     res.send("Server is Running...");

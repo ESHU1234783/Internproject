@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import DashboardCard from "../components/DashboardCard";
-
+import { useNavigate } from "react-router-dom";
 import {
   FaPlus,
   FaFileAlt,
@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -27,11 +29,12 @@ function Dashboard() {
 
         <div className="cards">
 
-          <DashboardCard
-            icon={<FaPlus />}
-            title="Create Resume"
-            description="Start building a professional resume."
-          />
+         <DashboardCard
+  icon={<FaPlus />}
+  title="Create Resume"
+  description="Start building a professional resume."
+  onClick={() => navigate("/create-resume")}
+/>
 
           <DashboardCard
             icon={<FaFileAlt />}

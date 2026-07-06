@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import Button from "../components/Button";
 
-
 function Login() {
   const navigate = useNavigate();
 
@@ -27,15 +26,26 @@ function Login() {
         formData
       );
 
-      alert(res.data.message);
+      console.log(res.data);
+
+      // Save JWT Token
+      localStorage.setItem("token", res.data.token);
+
+      // Save User Data (Optional)
+      localStorage.setItem("user", JSON.stringify(res.data.user));
+
+      alert(res.data.message || "Login Successful");
 
       navigate("/dashboard");
-
     } catch (error) {
-      alert(error.response?.data?.message || "Login Failed");
+      console.error(error);
+
+      alert(
+        error.response?.data?.message || "Login Failed"
+      );
     }
   };
- 
+
   return (
     <div className="container">
       <div className="card">
@@ -61,11 +71,12 @@ function Login() {
           text="Login"
           onClick={handleLogin}
         />
+
         <p>
-  <Link to="/forgot-password">
-    Forgot Password?
-  </Link>
-</p>
+          <Link to="/forgot-password">
+            Forgot Password?
+          </Link>
+        </p>
 
         <p>
           Don't have an account?

@@ -612,3 +612,298 @@ button {
         grid-column: 1;
     }
 }
+
+
+/* ==========================
+   My Resumes Page
+========================== */
+
+.my-resumes {
+    padding: 40px;
+    background: #f4f8ff;
+    min-height: 100vh;
+}
+
+.my-resumes h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.resume-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: 0.3s;
+}
+
+.resume-card:hover {
+    transform: translateY(-6px);
+}
+
+.resume-card h2 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.resume-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit {
+    background: #2563eb;
+    color: white;
+}
+
+.preview {
+    background: #10b981;
+    color: white;
+}
+
+.delete {
+    background: #ef4444;
+    color: white;
+}
+
+.buttons button:hover {
+    opacity: .9;
+}
+
+.empty {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.empty button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* Resume Preview */
+
+
+/* ==========================
+   Resume Preview
+========================== */
+
+.preview-page {
+    background: #f3f4f6;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.preview-header {
+    width: 210mm;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-header button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.preview-header button:hover {
+    background: #1d4ed8;
+}
+
+
+/* A4 Resume */
+
+.resume-template {
+    width: 210mm;
+    min-height: 297mm;
+    margin: auto;
+    background: #fff;
+    padding: 22mm;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    color: #111;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+    line-height: 1.6;
+}
+
+
+/* Name */
+
+.resume-template h1 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+
+/* Section */
+
+.resume-template h2 {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+    margin-top: 22px;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.resume-template h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.resume-template p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #222;
+}
+
+.resume-template ul {
+    padding-left: 22px;
+    margin-top: 8px;
+}
+
+.resume-template li {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+
+/* Personal Information */
+
+
+/* ==========================
+   Personal Information
+========================== */
+
+.personal-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.personal-info h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    color: #333;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* Section Gap */
+
+.resume-template section {
+    margin-top: 18px;
+}
+
+
+/* Horizontal Line */
+
+.resume-template hr {
+    border: none;
+    border-top: 1px solid #d9d9d9;
+    margin: 18px 0;
+}
+
+
+/* Hide while printing */
+
+@media print {
+    body {
+        background: #fff;
+    }
+    .preview-header {
+        display: none;
+    }
+    .preview-page {
+        padding: 0;
+        background: #fff;
+    }
+    .resume-template {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+
+/* PDF */
+
+.no-print {
+    display: block;
+}
